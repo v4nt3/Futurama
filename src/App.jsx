@@ -8,9 +8,11 @@ import './App.css';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [user, setUser] = useState(null);
 
-  const handleLogin = () => {
-    setIsLoggedIn(true);
+  const handleLogin = (username) => {
+    setUser(username); // se guarda el nombre del usuario
+    setIsLoggedIn(true); 
   };
 
   return (
@@ -20,7 +22,7 @@ function App() {
           <Route path="/" element={<Login onLogin={handleLogin} />} />
         ) : (
           <>
-            <Route path="/" element={<Layout />}>
+            <Route path="/" element={<Layout username={user} />}>
               <Route index element={<Navigate to="/characters" replace />} />
               <Route path="characters" element={<CharacterList />} />
               <Route path="form" element={<ContactForm />} />

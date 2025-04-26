@@ -18,6 +18,10 @@
 .navbar-logo a {
   text-decoration: none;
 }
+.navbar-user {
+  font-size: 1rem;
+  color: black;
+}
 
 .logo-text {
   font-size: 1.5rem;

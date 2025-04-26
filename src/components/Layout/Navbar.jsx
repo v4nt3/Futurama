@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
 
-function Navbar() {
+function Navbar({ username }) { 
   const location = useLocation();
 
   return (
@@ -12,7 +12,7 @@ function Navbar() {
             <span className="logo-text">FUTURAMA</span>
           </Link>
         </div>
-        
+
         <div className="navbar-links">
           <Link 
             to="/characters" 
@@ -27,6 +27,12 @@ function Navbar() {
             Formulario
           </Link>
         </div>
+
+        {username && ( 
+          <div className="navbar-user">
+            Bienvenid@, {username}
+          </div>
+        )}
       </div>
     </nav>
   );
