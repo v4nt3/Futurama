@@ -1,0 +1,64 @@
+.character-card {
+    width: 200px;
+    height: 300px;
+    perspective: 1000px; /* Agrega perspectiva para hacer que el giro se vea más realista */
+  }
+  
+  .character-card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s; /* Tiempo de transición para el giro */
+    transform-style: preserve-3d;
+    cursor: pointer;
+  }
+  
+  .character-card.flipped .character-card-inner {
+    transform: rotateY(180deg); /* Realiza el giro de 180 grados */
+  }
+  
+  .character-card-front, .character-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Esconde la parte posterior cuando está girada */
+  }
+  
+  .character-card-front {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .character-card-back {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: rotateY(180deg); /* Hace que la parte posterior esté girada inicialmente */
+  }
+  
+  .character-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  .character-info h2 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+  
+  .character-info p {
+    font-size: 1rem;
+    color: #666;
+    text-align: center;
+  }
+  
