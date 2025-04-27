@@ -1,7 +1,10 @@
 import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
+import { ThemeContext  } from '../DarkTheme/Dark.jsx'; // importa el CONTEXTO
+import { useContext } from 'react';
 
 function Navbar({ username }) { 
+  const { modoOscuro, toggleTema } = useContext(ThemeContext); // usa el CONTEXTO
   const location = useLocation();
 
   return (
@@ -26,6 +29,13 @@ function Navbar({ username }) {
           >
             Formulario
           </Link>
+          <Link 
+            to="/About"
+            className={location.pathname === '/About' ? 'active' : ''}
+          >
+            Acerca de nosotros
+          </Link>
+          <button className="logout-button" onClick={toggleTema}>Cambiar a modo {modoOscuro ? "Claro": "Oscuro"}</button>
         </div>
 
         {username && ( 

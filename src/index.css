@@ -34,6 +34,22 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
+/* Cuando esté en modo oscuro */
+body.dark-mode {
+  background-color: #121212; /* Fondo oscuro */
+  color: white; /* Texto claro */
+}
+/* Opcional: Navbar oscuro */
+body.dark-mode .navbar {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+/* Opcional: Cambiar los cards */
+body.dark-mode .card {
+  background-color: #2c2c2c;
+  color: white;
+}
 
 h1 {
   font-size: 2rem;
