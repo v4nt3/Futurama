@@ -1,0 +1,56 @@
+/* Estilo para las tarjetas del equipo */
+.team-card {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+/* Animación al pasar el mouse */
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo para las imágenes */
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 9999px; /* Full circle */
+  margin: 0 auto 1rem auto;
+  display: block;
+}
+
+/* Botón leer más */
+.read-more-button {
+  border: 2px solid #4f46e5;
+  color: #4f46e5;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+.read-more-button:hover {
+  background: #4f46e5;
+  color: white;
+}
+
+/* Correos */
+.team-email {
+  color: #3b82f6;
+  text-decoration: underline;
+}
+
+/* Repositorio GitHub */
+.github-link {
+  color: #3b82f6;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.github-link:hover {
+  color: #1e40af;
+}

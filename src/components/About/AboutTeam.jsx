@@ -1,69 +1,69 @@
-import { useState } from "react"
-
-
+import { useState } from "react";
 
 function About() {
-  const [expanded, setExpanded] = useState(false)
-
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-3xl mx-auto">
-        <div className="text-center">
-          <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl">About Us</h1>
-          <p className="mt-4 text-lg text-gray-600">
-            We're a passionate team dedicated to creating amazing experiences.
+    <div className="">
+      <div className="">
+        <div className="">
+          <h1 className="">Sobre Nosotros</h1>
+          <p className="">
+            Somos estudiantes de Ingeniería en Sistemas y de Multimedia, apasionados por la tecnología y la innovación.
           </p>
         </div>
 
-        <div className="mt-12">
-          <h2 className="text-2xl font-semibold text-gray-900">Our Mission</h2>
-          <p className="mt-4 text-gray-600">
-            Our mission is to provide high-quality solutions that help our clients achieve their goals. We believe in
-            simplicity, efficiency, and innovation.
-          </p>
-
-          {expanded && (
-            <p className="mt-4 text-gray-600">
-              Founded in 2023, we've been working with clients across various industries to deliver exceptional results
-              that exceed expectations.
-            </p>
-          )}
-
-          <button
-            onClick={() => setExpanded(!expanded)}
-            className="mt-4 text-sm font-medium text-gray-500 hover:text-gray-700"
-          >
-            {expanded ? "Read less" : "Read more"}
-          </button>
-        </div>
-
-        <div className="mt-12">
-          <h2 className="text-2xl font-semibold text-gray-900">Our Team</h2>
-          <div className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2">
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-lg font-medium text-gray-900">Jane Doe</h3>
-              <p className="text-gray-500">Founder & CEO</p>
+        <div className="">
+          <h2 className="">Nuestro Equipo</h2>
+          <div className="">
+            {/* Integrante 1 */}
+            <div className="team-card">
+              <img
+                src="/ruta-de-la-imagen-joan.png"
+                alt="Joan Sebastian Tunubala Sanchez"
+                className="profile-pic"
+              />
+              <h3 className="">Joan Sebastian Tunubala Sanchez</h3>
+              <p className="">
+                Email:{" "}
+                <a href="mailto:jstunubalas@correo.usbcali.edu.co" className="team-email">
+                  jstunubalas@correo.usbcali.edu.co
+                </a>
+              </p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-lg font-medium text-gray-900">John Smith</h3>
-              <p className="text-gray-500">CTO</p>
+
+            {/* Integrante 2 */}
+            <div className="team-card">
+              <img
+                src="/ruta-de-la-imagen-gissel.png"
+                alt="Gissel Vanessa Quitian Rojas"
+                className="profile-pic"
+              />
+              <h3 className="">Gissel Vanessa Quitian Rojas</h3>
+              <p className="">
+                Email:{" "}
+                <a href="mailto:gvquitianr@correo.usbcali.edu.co" className="team-email">
+                  gvquitianr@correo.usbcali.edu.co
+                </a>
+              </p>
             </div>
           </div>
         </div>
 
-        <div className="mt-12 text-center">
-          <p className="text-gray-500">
-            Contact us at:{" "}
-            <a href="mailto:info@example.com" className="text-gray-700 hover:underline">
-              info@example.com
+        <div className="">
+          <p className="">
+            Visita nuestro repositorio en GitHub:{" "}
+            <a
+              href="https://github.com/tu-repositorio"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="github-link"
+            >
+              github.com/tu-repositorio
             </a>
           </p>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default About
-
-
+export default About;
