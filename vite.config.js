@@ -19,12 +19,12 @@ export default defineConfig({
         start_url: '/',
         icons: [
           {
-            src: 'public\icons\Bender192.png',
+            src: 'icons/Bender128.png',
             sizes: '128x128',
             type: 'image/png',
           },
           {
-            src: 'public\icons\Bender512.png',
+            src: 'icons/Bender512.png',
             sizes: '512x512',
             type: 'image/png',
           },

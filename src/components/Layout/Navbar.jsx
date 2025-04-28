@@ -2,7 +2,7 @@ import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
 import { ThemeContext } from '../DarkTheme/Dark.jsx'; 
 import { useContext } from 'react';
-import InstallButtonFuturama from '../IntallButton/InstallButtonFuturama.jsx'
+import InstallButton from '../IntallButton/InstallButtonFT.jsx';
 
 function Navbar({ username }) { 
   const { modoOscuro, toggleTema } = useContext(ThemeContext); 
@@ -38,7 +38,7 @@ function Navbar({ username }) {
           </Link>
           
           {/* Botón de instalación */}
-          <InstallButtonFuturama />
+          <InstallButton />
 
           {/* Botón de tema oscuro/claro */}
           <button className="logout-button" onClick={toggleTema}>
