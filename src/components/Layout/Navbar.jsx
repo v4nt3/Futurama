@@ -1,10 +1,11 @@
 import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
-import { ThemeContext  } from '../DarkTheme/Dark.jsx'; // importa el CONTEXTO
+import { ThemeContext } from '../DarkTheme/Dark.jsx'; 
 import { useContext } from 'react';
+import InstallButtonFuturama from '../IntallButton/InstallButtonFuturama.jsx'
 
 function Navbar({ username }) { 
-  const { modoOscuro, toggleTema } = useContext(ThemeContext); // usa el CONTEXTO
+  const { modoOscuro, toggleTema } = useContext(ThemeContext); 
   const location = useLocation();
 
   return (
@@ -35,7 +36,14 @@ function Navbar({ username }) {
           >
             Acerca de nosotros
           </Link>
-          <button className="logout-button" onClick={toggleTema}>Cambiar a modo {modoOscuro ? "Claro": "Oscuro"}</button>
+          
+          {/* Botón de instalación */}
+          <InstallButtonFuturama />
+
+          {/* Botón de tema oscuro/claro */}
+          <button className="logout-button" onClick={toggleTema}>
+            Cambiar a modo {modoOscuro ? "Claro" : "Oscuro"}
+          </button>
         </div>
 
         {username && ( 

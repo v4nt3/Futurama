@@ -6,8 +6,8 @@ import Filter from '../Filter/filter';
 function CharacterList() {
   const [characters, setCharacters] = useState([]);
   const [filteredCharacters, setFilteredCharacters] = useState([]);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [speciesFilter, setSpeciesFilter] = useState('');
+  const [searchTerm, setSearchTerm] = useState(localStorage.getItem('searchTerm') || ''); // Cargar desde localStorage
+  const [speciesFilter, setSpeciesFilter] = useState(localStorage.getItem('speciesFilter') || ''); // Cargar desde localStorage
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -45,6 +45,11 @@ function CharacterList() {
     }
 
     setFilteredCharacters(filtered);
+
+    // Guardar en localStorage cuando cambian los filtros
+    localStorage.setItem('searchTerm', searchTerm);
+    localStorage.setItem('speciesFilter', speciesFilter);
+
   }, [searchTerm, speciesFilter, characters]);
 
   const handleSearch = (e) => setSearchTerm(e.target.value);

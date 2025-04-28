@@ -1,28 +1,28 @@
-import { useState } from "react";
+import './AboutCss.css'// Asegúrate de que la ruta sea correcta
 
 function About() {
   return (
-    <div className="">
-      <div className="">
-        <div className="">
-          <h1 className="">Sobre Nosotros</h1>
-          <p className="">
+    <div className="about-container">
+      <div className="about-content">
+        <div className="about-header">
+          <h1 className="about-title">Sobre Nosotros</h1>
+          <p className="about-description">
             Somos estudiantes de Ingeniería en Sistemas y de Multimedia, apasionados por la tecnología y la innovación.
           </p>
         </div>
 
-        <div className="">
-          <h2 className="">Nuestro Equipo</h2>
-          <div className="">
+        <div className="team-section">
+          <h2 className="team-title">Nuestro Equipo</h2>
+          <div className="team-cards">
             {/* Integrante 1 */}
             <div className="team-card">
               <img
-                src="/ruta-de-la-imagen-joan.png"
+                src="src\components\About\img\JoanFoto.jpeg"
                 alt="Joan Sebastian Tunubala Sanchez"
                 className="profile-pic"
               />
-              <h3 className="">Joan Sebastian Tunubala Sanchez</h3>
-              <p className="">
+              <h3 className="team-name">Joan Sebastian Tunubala Sanchez</h3>
+              <p className="team-contact">
                 Email:{" "}
                 <a href="mailto:jstunubalas@correo.usbcali.edu.co" className="team-email">
                   jstunubalas@correo.usbcali.edu.co
@@ -33,12 +33,12 @@ function About() {
             {/* Integrante 2 */}
             <div className="team-card">
               <img
-                src="/ruta-de-la-imagen-gissel.png"
+                src='src\components\About\img\VaneFoto.png'
                 alt="Gissel Vanessa Quitian Rojas"
                 className="profile-pic"
               />
-              <h3 className="">Gissel Vanessa Quitian Rojas</h3>
-              <p className="">
+              <h3 className="team-name">Gissel Vanessa Quitian Rojas</h3>
+              <p className="team-contact">
                 Email:{" "}
                 <a href="mailto:gvquitianr@correo.usbcali.edu.co" className="team-email">
                   gvquitianr@correo.usbcali.edu.co
@@ -48,11 +48,11 @@ function About() {
           </div>
         </div>
 
-        <div className="">
-          <p className="">
+        <div className="github-section">
+          <p className="github-text">
             Visita nuestro repositorio en GitHub:{" "}
             <a
-              href="https://github.com/tu-repositorio"
+              href="https://github.com/v4nt3/Futurama"
               target="_blank"
               rel="noopener noreferrer"
               className="github-link"

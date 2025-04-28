@@ -1,25 +1,25 @@
-import "./Filter.css";
+import './Filter.css'; // Si tienes un CSS
 
+function Filter({ data, onFilter }) {
+  const species = [...new Set(data.map(character => character.species))];
 
-function Filter({data,onFilter}) {
+  const handleChange = (e) => {
+    onFilter(e.target.value);
+  };
 
-    const filterSpeciesList = [...new Set(data.map(char => char.species))];
-
-    const handleChange = (e) => {
-        const selectedSpecies = e.target.value;
-        onFilter(selectedSpecies); // Le decimos al padre cuál especie se seleccionó
-      };
-
-    return (
-        <div className="filter">
-            <select onChange={handleChange} defaultValue="">
-                <option value="" disabled hidden>Selecciona una especie</option>
-                {filterSpeciesList.map((species,idx) => (<option key={idx} value={species}>
-                {species}
-            </option>))}
-            </select>
-        </div>
-    )
+  return (
+    <div className="filter-container">
+      <label className="filter-label">Filtrar por especie</label>
+      <select onChange={handleChange} className="filter-select" value={localStorage.getItem('speciesFilter') || ''}>
+        <option value="">Todos</option>
+        {species.map((specie, index) => (
+          <option key={index} value={specie}>
+            {specie}
+          </option>
+        ))}
+      </select>
+    </div>
+  );
 }
 
 export default Filter;
