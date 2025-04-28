@@ -1,4 +1,5 @@
-import './Filter.css'; // Si tienes un CSS
+import './diseñoFilter.css';
+
 
 function Filter({ data, onFilter }) {
   const species = [...new Set(data.map(character => character.species))];
