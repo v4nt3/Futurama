@@ -17,7 +17,7 @@ function About() {
             {/* Integrante 1 */}
             <div className="team-card">
               <img
-                src="img/joanFoto.jpeg"// Asegúrate de que la ruta sea correcta
+                src="src/assets/img/SebasPerfil.png"
                 alt="Joan Sebastian Tunubala Sanchez"
                 className="profile-pic"
               />
@@ -29,11 +29,9 @@ function About() {
                 </a>
               </p>
             </div>
-
-            /* Integrante 2 */
                   <div className="team-card">
                     <img
-                    src="src/assets/img/VaneFoto.png" // Asegúrate de que la ruta sea correcta
+                    src="src/assets/img/VanePerfil.png" // Asegúrate de que la ruta sea correcta
                 alt="Gissel Vanessa Quitian Rojas"
                 className="profile-pic"
               />
