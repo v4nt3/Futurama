@@ -1,6 +1,6 @@
 .about-container {
-  padding: 40px 20px;
-  background: #f0f2f5;
+  padding: 60px 20px;
+  background: var(--background-light);
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -8,115 +8,150 @@
 }
 
 .about-content {
-  background: #ffffff;
-  padding: 30px;
-  border-radius: 12px;
+  background: var(--card-background-light);
+  padding: 40px;
+  border-radius: var(--border-radius);
   max-width: 1000px;
   width: 100%;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border-color-light);
 }
 
+/* Header */
 .about-header {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 .about-title {
-  font-size: 2.5rem;
-  color: #333333;
-  margin-bottom: 10px;
+  font-size: 2.4rem;
+  color: var(--text-dark);
+  margin-bottom: 12px;
 }
 
 .about-description {
-  font-size: 1.2rem;
-  color: #666666;
+  font-size: 1.1rem;
+  color: var(--text-muted);
 }
 
+/* Team */
 .team-section {
   margin-top: 40px;
 }
 
 .team-title {
-  font-size: 2rem;
-  color: #444444;
+  font-size: 1.8rem;
+  color: var(--text-dark);
   text-align: center;
   margin-bottom: 30px;
 }
 
+/* Cards */
 .team-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 24px;
 }
 
 .team-card {
-  background: #fafafa;
-  border: 1px solid #dddddd;
-  border-radius: 10px;
+  background: var(--card-background-light);
+  border: 1px solid var(--border-color-light);
+  border-radius: var(--border-radius);
   width: 280px;
-  padding: 20px;
+  padding: 25px;
   text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform var(--transition-duration),
+              box-shadow var(--transition-duration);
 }
 
 .team-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(5, 150, 105, 0.12);
 }
 
+/* Imagen */
 .profile-pic {
-  width: 120px;
-  height: 120px;
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 15px;
+  border: 3px solid var(--primary-color);
 }
 
+/* Texto */
 .team-name {
-  font-size: 1.4rem;
-  color: #333333;
-  margin-bottom: 10px;
+  font-size: 1.3rem;
+  color: var(--text-dark);
+  margin-bottom: 8px;
 }
 
 .team-contact {
-  font-size: 1rem;
-  color: #666666;
+  font-size: 0.95rem;
+  color: var(--text-muted);
 }
 
-.team-email {
-  color: #0077cc;
+/* Links */
+.team-email,
+.github-link {
+  color: var(--primary-color);
+  font-weight: 600;
   text-decoration: none;
+  transition: color var(--transition-duration);
 }
 
-.team-email:hover {
-  text-decoration: underline;
+.team-email:hover,
+.github-link:hover {
+  color: var(--primary-hover-color);
 }
 
+/* GitHub Section */
 .github-section {
-  margin-top: 40px;
+  margin-top: 50px;
   text-align: center;
 }
 
 .github-text {
-  font-size: 1.1rem;
-  color: #555555;
+  font-size: 1rem;
+  color: var(--text-muted);
 }
 
-.github-link {
-  color: #0077cc;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.github-link:hover {
-  text-decoration: underline;
-}
-
-/* Responsive para pantallas pequeñas */
+/* Responsive */
 @media (max-width: 768px) {
   .team-cards {
     flex-direction: column;
     align-items: center;
   }
+}
+
+body.dark-mode .about-container {
+  background: var(--background-dark);
+}
+
+body.dark-mode .about-content {
+  background: var(--card-background-dark);
+  border: 1px solid var(--border-color-dark);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .about-title,
+body.dark-mode .team-title,
+body.dark-mode .team-name {
+  color: var(--text-light);
+}
+
+body.dark-mode .about-description,
+body.dark-mode .team-contact,
+body.dark-mode .github-text {
+  color: rgb(214, 255, 220);
+}
+
+body.dark-mode .team-card {
+  background: var(--card-background-dark);
+  border: 1px solid var(--border-color-dark);
+}
+
+body.dark-mode .team-card:hover {
+  box-shadow: 0 12px 30px rgba(16, 185, 129, 0.2);
 }

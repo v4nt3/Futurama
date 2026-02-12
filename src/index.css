@@ -1,17 +1,32 @@
 :root {
   --font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  --primary-color: #3563E9;
-  --primary-hover-color: #2a50c4;
-  --background-light: #f5f7fb;
-  --background-dark: #121212;
-  --text-light: #ffffff;
-  --text-dark: #213547;
+
+  /* Primary */
+  --primary-color: #059669;
+  --primary-hover-color: #047857;
+
+  /* Backgrounds */
+  --background-light: #f6fef9;
+  --background-dark: #0f1f17;
+
+  /* Text */
+  --text-light: #ecfdf5;
+  --text-dark: #1a2e22;
+  --text-muted: #4b6354;
+
+  /* Surfaces */
   --navbar-background-light: #ffffff;
-  --navbar-background-dark: #1e1e1e;
+  --navbar-background-dark: #13261d;
+
   --card-background-light: #ffffff;
-  --card-background-dark: #2c2c2c;
-  --button-background: #f9f9f9;
-  --border-radius: 8px;
+  --card-background-dark: #173027;
+
+  /* UI */
+  --button-background: #d1fae5;
+  --border-color-light: #a7f3d0;
+  --border-color-dark: #224436;
+
+  --border-radius: 12px;
   --transition-duration: 0.25s;
 }
 
@@ -23,7 +38,7 @@
 
 body {
   font-family: var(--font-family);
-  line-height: 1.5;
+  line-height: 1.6;
   font-weight: 400;
   color: var(--text-dark);
   background-color: var(--background-light);
@@ -31,6 +46,7 @@ body {
   min-height: 100vh;
   transition: background-color var(--transition-duration), color var(--transition-duration);
 }
+
 
 a {
   font-weight: 500;
@@ -55,18 +71,21 @@ h2 {
 
 button {
   border-radius: var(--border-radius);
-  border: 1px solid transparent;
+  border: 1px solid var(--border-color-light);
   padding: 0.6em 1.2em;
-  font-size: 1em;
+  font-size: 0.95rem;
   font-weight: 500;
-  background-color: var(--button-background);
+  background-color: var(--primary-color);
+  color: white;
   cursor: pointer;
-  transition: border-color var(--transition-duration);
+  transition: all var(--transition-duration);
 }
 
 button:hover {
-  border-color: var(--primary-color);
+  background-color: var(--primary-hover-color);
+  transform: translateY(-1px);
 }
+
 
 button:focus,
 button:focus-visible {
@@ -85,14 +104,16 @@ body.dark-mode {
 body.dark-mode .navbar {
   background-color: var(--navbar-background-dark);
   color: var(--text-light);
+  border-bottom: 1px solid var(--border-color-dark);
 }
 
 body.dark-mode .card {
   background-color: var(--card-background-dark);
   color: var(--text-light);
+  border: 1px solid var(--border-color-dark);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Opcional: navbar y cards en modo claro */
 .navbar {
   background-color: var(--navbar-background-light);
   color: var(--text-dark);
@@ -101,5 +122,16 @@ body.dark-mode .card {
 .card {
   background-color: var(--card-background-light);
   color: var(--text-dark);
+  border-radius: var(--border-radius);
+  padding: 1.2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform var(--transition-duration),
+              box-shadow var(--transition-duration);
 }
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
 

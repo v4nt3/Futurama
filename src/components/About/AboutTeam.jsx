@@ -31,7 +31,7 @@ function About() {
             </div>
                   <div className="team-card">
                     <img
-                    src="/img/VanePerfil.png" // Asegúrate de que la ruta sea correcta
+                    src="/img/VanePerfil.png"
                 alt="Gissel Vanessa Quitian Rojas"
                 className="profile-pic"
               />
@@ -55,7 +55,7 @@ function About() {
               rel="noopener noreferrer"
               className="github-link"
             >
-              github.com/tu-repositorio
+              github.com/Futurama
             </a>
           </p>
         </div>
