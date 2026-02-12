@@ -2,7 +2,6 @@ import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
 import { ThemeContext } from '../DarkTheme/Dark.jsx'; 
 import { useContext } from 'react';
-import InstallButton from '../IntallButton/InstallButtonFT.jsx';
 
 function Navbar({ username }) { 
   const { modoOscuro, toggleTema } = useContext(ThemeContext); 
@@ -37,9 +36,6 @@ function Navbar({ username }) {
             Acerca de nosotros
           </Link>
           
-          {/* Botón de instalación */}
-          <InstallButton />
-
           {/* Botón de tema oscuro/claro */}
           <button className="logout-button" onClick={toggleTema}>
             Cambiar a modo {modoOscuro ? "Claro" : "Oscuro"}
